@@ -175,7 +175,7 @@ def move():
         if abs(pacman - point) < 20:
             return
 
-    ontimer(move, 100)
+    ontimer(move, 20)
 
 # Cambia la posición dependiendo el input
 
