@@ -6,7 +6,7 @@
 | Tic Tac Toe  | Jaime López - A00571842  |
 |Packman  | Raúl Uribe - |
 
-###Cambios realizados a TicTacToe - Jaime López
+Cambios realizados a TicTacToe - Jaime López
 -------------
 -  Cambio de colores a la "X" y  a la "O", cambio de color al fondo, cambio de color a las líneas que conforman la rejilla/ cuadrícula del juego. 
 - Cambio de tamaño a "X" y a "O" y centrado en los espacios/cuadros del juego
