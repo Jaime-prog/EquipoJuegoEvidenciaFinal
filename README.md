@@ -20,3 +20,12 @@ Cambios realizados a Memory - Eliuth Balderas
 - Comentarios en cada una de las funciones
 - Función para contar cada uno de los taps hechos por el usuario
 - Función para detectar cuando todo el memorama estuviera completo
+
+Cambios realizados a Pacman - Raul Uribe
+-------------
+- Comentarios en cada una de las funciones
+- Corrección de errores con el formato PEP 8
+- Modificación del arreglo ghosts para agregar las coordenadas del 5to fantasma
+- Modificación de la función move() agregando a options “vector(0, -5),” 
+- Modificación de dot(100, ‘red') a dot(100, 'red')
+
