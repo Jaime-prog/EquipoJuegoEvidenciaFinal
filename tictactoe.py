@@ -12,7 +12,7 @@ from turtle import *
 from freegames import line
 
 def grid():
-    """Draw tic-tac-toe grid."""
+    """Draw the grid of tictactoe game."""
     line(-67, 200, -67, -200)
     line(67, 200, 67, -200)
     line(-200, -67, 200, -67)
@@ -34,7 +34,7 @@ def drawo(x, y):
 
 
 def floor(value):
-    """Round value down to grid with square size 133."""
+    """Round value down to grid."""
     return ((value + 200) // 133) * 133 - 200
 
 
