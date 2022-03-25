@@ -28,9 +28,9 @@ def drawx(x, y):
 def drawo(x, y):
     """Draw O player."""
     up()
-    goto(x + 67, y + 5)
+    goto(x + 64, y + 20)
     down()
-    circle(62)
+    circle(45)
 
 
 def floor(value):
