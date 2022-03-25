@@ -24,6 +24,7 @@ state = {'mark': None}
 hide = [True] * 64
 
 sum_taps=0
+game_complete=0
 
 # Draw a square at a xy position 
 def square(x, y):
@@ -65,6 +66,15 @@ def tap(x, y):
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None
+        # Counts all pairs found
+        game_complete= game_complete + 1
+        print("Número de parejas encontradas: ", game_complete)
+        # Prints when all tiles are revelead 
+        if game_complete == 32:
+            print ("Congratulations you have completed the game")
+
+
+        
             
 # Draws the car image if numbers shown are the same. Otherwise,tiles are hidden again.
 def draw():
@@ -78,7 +88,10 @@ def draw():
         if hide[count]:
             x, y = xy(count)
             square(x, y)
-       
+        if count == 64:
+            print("Congratulations you have completed the game")
+            done()
+
     mark = state['mark']
 
     if mark is not None and hide[mark]:
