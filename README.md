@@ -4,7 +4,7 @@
 | ------------- | ------------- |
 |Memoria  | Eliuth Balderas - A01703315|
 | Tic Tac Toe  | Jaime López - A00571842  |
-|Packman  | Raúl Uribe - | - A01275964 |
+|Packman  | Raúl Uribe - A01275964 |    
 
 Cambios realizados a TicTacToe - Jaime López
 -------------
