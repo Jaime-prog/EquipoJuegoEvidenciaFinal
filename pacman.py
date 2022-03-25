@@ -10,10 +10,23 @@ Exercises
 """
 
 from random import choice
-from turtle import *
-
+from turtle import up
+from turtle import Turtle
+from turtle import bgcolor
+from turtle import clear
+from turtle import goto
+from turtle import dot
+from turtle import update
+from turtle import ontimer
+from turtle import setup
+from turtle import hideturtle
+from turtle import tracer
+from turtle import listen
+from turtle import onkey
+from turtle import done
 from freegames import floor, vector
 
+# Inicializamos las variables
 state = {'score': 0}
 path = Turtle(visible=False)
 writer = Turtle(visible=False)
@@ -24,8 +37,9 @@ ghosts = [
     [vector(-180, -160), vector(0, 5)],
     [vector(100, 160), vector(0, -5)],
     [vector(100, -160), vector(-5, 0)],
-    
-]
+    [vector(100, -160), vector(-5, 0)], ]
+
+# Matriz del tablero
 # fmt: off
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -88,6 +102,8 @@ def valid(point):
 
     return point.x % 20 == 0 or point.y % 20 == 0
 
+# Función que crea el tablero del juego
+
 
 def world():
     """Draw world using path."""
@@ -115,6 +131,7 @@ def move():
 
     clear()
 
+    # Aumenta el puntaje
     if valid(pacman + aim):
         pacman.move(aim)
 
@@ -131,6 +148,7 @@ def move():
     goto(pacman.x + 10, pacman.y + 10)
     dot(20, 'yellow')
 
+    # Agregamos a los fantasmas
     for point, course in ghosts:
         if valid(point + course):
             point.move(course)
@@ -140,8 +158,8 @@ def move():
                 vector(-5, 0),
                 vector(0, 5),
                 vector(0, -5),
-                
-            ]
+                vector(0, -5), ]
+
             plan = choice(options)
             course.x = plan.x
             course.y = plan.y
@@ -152,14 +170,18 @@ def move():
 
     update()
 
+    # Parámetros para detener el juego
     for point, course in ghosts:
         if abs(pacman - point) < 20:
             return
 
     ontimer(move, 100)
 
+# Cambia la posición dependiendo el input
+
 
 def change(x, y):
+
     """Change pacman aim if valid."""
     if valid(pacman + vector(x, y)):
         aim.x = x
