@@ -21,8 +21,8 @@ def grid():
 
 def drawx(x, y):
     """Draw X player."""
-    line(x, y, x + 133, y + 133)
-    line(x, y + 133, x + 133, y)
+    line(x+30, y+30, x + 100, y + 100)
+    line(x+30, y + 100, x + 100, y+30)
 
 
 def drawo(x, y):
