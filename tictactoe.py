@@ -45,16 +45,25 @@ def floor(value):
 state = {'player': 0}
 players = [drawx, drawo]
 
+def make_symbol(x,y,player):
+    """Draw either the x or the o accordingly"""
+    draw = players[player]
+    draw(x, y)
+    update()
+    state['player'] = not player  #Changes from x to o
+
 
 def tap(x, y):
     """Draw X or O in tapped square."""
     x = floor(x)
     y = floor(y)
+    column=(x+205) 
+    row= (-y+205)
+    square= column +row*3
+    square=int(square)  # Set a specific value for each square
     player = state['player']
-    draw = players[player]
-    draw(x, y)
-    update()
-    state['player'] = not player
+    make_symbol(x,y,player)
+    
 
 
 setup(420, 420, 370, 0)
