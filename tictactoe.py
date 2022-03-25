@@ -13,6 +13,8 @@ from freegames import line
 
 def grid():
     """Draw the grid of tictactoe game."""
+    pencolor("blue")
+    bgcolor("black")
     line(-67, 200, -67, -200)
     line(67, 200, 67, -200)
     line(-200, -67, 200, -67)
@@ -21,12 +23,14 @@ def grid():
 
 def drawx(x, y):
     """Draw X player."""
+    pencolor("orange")
     line(x+30, y+30, x + 100, y + 100)
     line(x+30, y + 100, x + 100, y+30)
 
 
 def drawo(x, y):
     """Draw O player."""
+    pencolor("red")
     up()
     goto(x + 64, y + 20)
     down()
