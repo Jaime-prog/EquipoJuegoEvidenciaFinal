@@ -13,3 +13,10 @@ Cambios realizados a TicTacToe - Jaime López
 - Integración de la función make_symbol para no repetir las mismas líneas de código 
 - Modificación a la función tap para poder validar si un espacio/cuadro estaba vació o ya estaba ocupado. Esto sirve para que no se pueda ocupar un mismo espacio para los dos simbolos "X" y "O". 
 - Cambio de sintaxis y forma de importar una librería para que se alineara a la  Guía de estilo para el código Python PEP 8. Al importar la librería de una forma distinta, hubo varios métodos, de este, que tuve que añadirles el turtle."nombre_del_metodo".
+
+
+Cambios realizados a Memory - Eliuth Balderas
+-------------
+- Comentarios en cada una de las funciones
+- Función para contar cada uno de los taps hechos por el usuario
+- Función para detectar cuando todo el memorama estuviera completo
